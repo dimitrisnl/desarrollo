@@ -1,0 +1,85 @@
+{
+  "name": "next-auth-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "pre-commit": "lint-staged",
+    "postinstall": "prisma generate",
+    "db:admin": "prisma studio",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed --preview-feature",
+    "db:push-dev": "prisma db push --preview-feature",
+    "type-check": "tsc --noEmit",
+    "update-browserlist": "npx browserslist@latest --update-db",
+    "ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'"
+  },
+  "author": "Dimitrios Lytras <dnlytras@gmail.com>",
+  "license": "MIT",
+  "simple-pre-commit": "npx lint-staged",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@headlessui/react": "^0.3.1",
+    "@heroicons/react": "^1.0.0",
+    "@prisma/client": "^2.20.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "joi": "^17.2.1",
+    "lodash": "^4.17.21",
+    "next": "^10.1.1",
+    "next-auth": "^3.13.3",
+    "nextjs-progressbar": "^0.0.8",
+    "nodemailer": "^6.5.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hot-toast": "^1.0.2",
+    "react-query": "^3.12.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.17",
+    "@types/joi": "^17.2.3",
+    "@types/next-auth": "3.13.0",
+    "@types/node": "^14.14.37",
+    "@types/react": "17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "lint-staged": "^10.2.2",
+    "postcss": "^8.2.8",
+    "prettier": "^2.2.1",
+    "prisma": "^2.20.0",
+    "simple-pre-commit": "^1.2.1",
+    "tailwindcss": "^2.0.4",
+    "ts-node": "^9.1.1",
+    "typescript": "4.2.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

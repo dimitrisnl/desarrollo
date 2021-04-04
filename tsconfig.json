@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/b/*": ["./backend/*"],
+      "@/f/*": ["./frontend/*"]
+    },
+    "target": "es6", // i mean come on
+    "noImplicitAny": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules", "build", "dist", "public"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
